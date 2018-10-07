@@ -6,7 +6,7 @@ ENV PATH "$PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH"
 ENV MAYUR_DOCKER_PYENV_HOME /mayur/docker-pyenv
 
 RUN apt-get update && \
-apt-get install -y curl gcc git g++ libbz2-dev libsqlite3-dev libssl1.0-dev libreadline-dev make zlib1g-dev
+apt-get install -y curl gcc git g++ libbz2-dev libsqlite3-dev libssl1.0-dev libreadline-dev make zlib1g-dev bunzip2
 
 RUN mkdir -p "$PYENV_ROOT" && \
     git clone https://github.com/pyenv/pyenv.git "$PYENV_ROOT" && \

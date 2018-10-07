@@ -11,7 +11,6 @@ apt-get install -y curl gcc git g++ libbz2-dev libsqlite3-dev libssl1.0-dev libr
 RUN mkdir -p "$PYENV_ROOT" && \
     git clone https://github.com/pyenv/pyenv.git "$PYENV_ROOT" && \
     cd "$PYENV_ROOT" && \
-    git checkout -q v1.2.7 && \
     rm -r "$PYENV_ROOT/.git"
 
 RUN set -x \

@@ -16,11 +16,9 @@ RUN mkdir -p "$PYENV_ROOT" && \
 RUN set -x \
     && PYTHON2_VERSION="2.7.15" \
     && PYTHON3_VERSION="3.6.6" \
-    && ANACONDA2_VERSION="anaconda2-5.3.0" \
-    && ANACONDA3_VERSION="anaconda3-5.3.0" \
+    && ANACONDA_VERSION="anaconda3-5.3.0" \
     && pyenv install "$PYTHON2_VERSION" \
     && pyenv install "$PYTHON3_VERSION" \
-    && pyenv install "$ANACONDA2_VERSION" \
-    && pyenv install "$ANACONDA3_VERSION" \
-&& pyenv global system "$PYTHON2_VERSION" 
+    && pyenv install "$ANACONDA_VERSION" \
+&& pyenv global system "$PYTHON2_VERSION" "$PYTHON3_VERSION" "$ANACONDA_VERSION"
 
